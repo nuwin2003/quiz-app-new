@@ -25,13 +25,13 @@ class ResultScreen extends StatelessWidget {
         'user_answer': answerList[i],
       });
     }
-
+    //To check how many correct answers
     for (var j = 0; j < summary.length; j++) {
       if (summary[j]['user_answer'] == summary[j]['correct_answer']) {
         numberOfCorrectAnswers++;
       }
     }
-
+    //To add colour and remarks according to the correct answers
     if (numberOfCorrectAnswers >= 7) {
       color = Colors.green;
       remarks = "Great!";
