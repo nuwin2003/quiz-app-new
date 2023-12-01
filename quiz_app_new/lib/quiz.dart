@@ -14,14 +14,17 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   String activeScreen = 'start';
   List<String> selectedAnswers = [];
+  //List<QuizQuestion> questions = QuizQuestion.loadQuestions();
+
   //To change activeScreen value
   void onScreenChange(String value) {
     setState(() {
       activeScreen = value;
     });
   }
+
   //To add the selected answers
-  void onAnswerSelect(String answer) {
+  void onAnswer(String answer) {
     selectedAnswers.add(answer);
     if (selectedAnswers.length == questions.length) {
       setState(() {
@@ -29,6 +32,7 @@ class _QuizState extends State<Quiz> {
       });
     }
   }
+
   //To reset the quiz
   void onRestart(String value) {
     setState(() {
@@ -47,7 +51,7 @@ class _QuizState extends State<Quiz> {
     //To activate quiz screen
     if (activeScreen == 'quiz') {
       currentScreen =
-          QuestionScreen(onAnswer: onAnswerSelect, onAction: onScreenChange);
+          QuestionScreen(onAnswer: onAnswer, onAction: onScreenChange);
     }
     //To activate result screen
     if (activeScreen == 'result') {
@@ -56,6 +60,7 @@ class _QuizState extends State<Quiz> {
     }
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           body: Container(
         decoration: const BoxDecoration(

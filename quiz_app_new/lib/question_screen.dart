@@ -15,7 +15,9 @@ class QuestionScreen extends StatefulWidget {
 
 class _QuestionScreenState extends State<QuestionScreen> {
   int currentQuestionIndex = 0;
-
+  //List<QuizQuestion> questions = QuizQuestion.loadQuestions();
+  
+  //To increment questionIndex and save answer
   void answerQuestion(String answer) {
     widget.onAnswer(answer);
     setState(() {
@@ -44,6 +46,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                 .map((answer) => AnswerButton(
                     value: answer,
                     onAnswer: () {
+                      //Passing the answer
                       answerQuestion(answer);
                     })),
             const SizedBox(

@@ -12,16 +12,18 @@ class StartScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Text(
-            'Let\'s do some Quiz',
+            'Let\'s do some Quiz!!',
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black, fontSize: 28),
+            style: TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),
           ),
+          const SizedBox(height: 20),
           Image.asset(
             'assets/images/quiz-cover.png',
             width: 300,
+            
           ),
           const SizedBox(
-            height: 40,
+            height: 30,
           ),
           OutlinedButton(
               onPressed: () {
