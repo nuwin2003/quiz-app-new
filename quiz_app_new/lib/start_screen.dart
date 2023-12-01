@@ -14,13 +14,13 @@ class StartScreen extends StatelessWidget {
           const Text(
             'Let\'s do some Quiz!!',
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 20),
           Image.asset(
             'assets/images/quiz-cover.png',
             width: 300,
-            
           ),
           const SizedBox(
             height: 30,
@@ -28,9 +28,8 @@ class StartScreen extends StatelessWidget {
           OutlinedButton(
               onPressed: () {
                 onAction('quiz');
-              }, style: TextButton.styleFrom(
-                backgroundColor: Colors.white
-              ),
+              },
+              style: TextButton.styleFrom(backgroundColor: Colors.white),
               child: const Text('Start Quiz'))
         ],
       ),
