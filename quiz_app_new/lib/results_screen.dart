@@ -10,15 +10,14 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     int numberOfCorrectAnswers = 0;
     List<Map<String, Object>> summary = [];
-    //List<QuizQuestion> questions =QuizQuestion.loadQuestions();
-    
+    //Future<List<QuizQuestion>> questions = QuizQuestion.loadQuestions();
+
     //To dynamically change interface according to the results
     Color color;
     String remarks;
-    //List<QuizQuestion> questions = loadQuestions();
+
     for (var i = 0; i < answerList.length; i++) {
       summary.add({
         'questionIndex': i,

@@ -14,7 +14,7 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   String activeScreen = 'start';
   List<String> selectedAnswers = [];
-  //List<QuizQuestion> questions = QuizQuestion.loadQuestions();
+  //Future<List<QuizQuestion>> questions = QuizQuestion.loadQuestions();
 
   //To change activeScreen value
   void onScreenChange(String value) {

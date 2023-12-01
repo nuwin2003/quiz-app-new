@@ -90,27 +90,3 @@ List<QuizQuestion> questions = [
     ],
   ),
 ];
-
-// class Questions{
-//   Future<void> loadQuestions() async {
-//     final String response =
-//         await rootBundle.loadString("assets/questions.json");
-//     final data = await json.decode(response);
-//     setState(() {
-//       questions = data["questions"];
-//     });
-//   }
-// }
-
-// List<QuizQuestion> loadQuestions() {
-//   final file = File('assets/questions.json');
-//   final jsonString = file.readAsStringSync();
-
-//   final List<dynamic> jsonList = jsonDecode(jsonString);
-//   final List<QuizQuestion> questions = jsonList.map((json) => QuizQuestion(
-//     json['question'] as String,
-//     (json['answers'] as List<dynamic>).cast<String>(),
-//   )).toList();
-
-//   return questions;
-// }

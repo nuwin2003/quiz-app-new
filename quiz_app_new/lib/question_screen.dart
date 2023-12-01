@@ -15,7 +15,7 @@ class QuestionScreen extends StatefulWidget {
 
 class _QuestionScreenState extends State<QuestionScreen> {
   int currentQuestionIndex = 0;
-  //List<QuizQuestion> questions = QuizQuestion.loadQuestions();
+  //Future<List<QuizQuestion>> questions = QuizQuestion.loadQuestions();
   
   //To increment questionIndex and save answer
   void answerQuestion(String answer) {
